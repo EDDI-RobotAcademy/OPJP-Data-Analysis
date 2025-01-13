@@ -12,6 +12,7 @@ OPJP Data Analysis
 넷플릭스 콘텐츠를 유사한 항목끼리 클러스터링.
 클러스터 내부에서는 유사성이 높고, 클러스터 간에는 차별성이 유지되도록 설계.
 데이터를 바탕으로 개인화된 콘텐츠 추천 시스템(Content-Based Recommender System) 구축.
+
 데이터셋 정보
 
 데이터 출처
@@ -33,58 +34,56 @@ rating: 연령 등급 (예: TV-MA, TV-14 등)
 duration: 콘텐츠 길이 (분 단위 또는 시즌 수)
 listed_in: 장르 정보 (예: 드라마, 다큐멘터리 등)
 description: 간략한 콘텐츠 설명
-프로젝트 작업 흐름
 
+프로젝트 작업 흐름
 1. 데이터 전처리
 1.1. 결측값 처리
-
 데이터셋에 결측값이 다수 포함되어 있으며, 이에 대한 처리가 필요했습니다.
 director, cast, country 컬럼: 결측값을 'Unknown'으로 대체.
 rating 컬럼: 최빈값(Mode)을 사용하여 결측값 대체.
 date_added 컬럼: 결측값이 포함된 10개의 레코드 삭제.
-1.2. 데이터 변환
 
+1.2. 데이터 변환
 date_added를 날짜 형식으로 변환 후, 연도(year_added)와 월(month_added)로 분리.
 duration 컬럼은 분(min) 또는 시즌(season) 데이터를 정수로 변환.
-1.3. 문자열 처리
 
+1.3. 문자열 처리
 다중 국가 또는 다중 장르의 데이터를 단순화하기 위해 주요 값만 추출.
 예: country와 listed_in의 첫 번째 값만 유지.
+
 2. 탐색적 데이터 분석 (EDA)
 EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 
 2.1. 데이터 분포
-
 영화는 데이터셋의 약 **69.14%**를 차지하며, TV 쇼는 약 **30.86%**로 나타남.
 넷플릭스 콘텐츠는 미국, 인도, 영국 순으로 제작된 비중이 높음.
 장르별로는 드라마, 코미디, 다큐멘터리가 상위권에 위치.
 대부분의 콘텐츠는 성인 및 젊은 성인 연령대를 대상으로 제작.
-2.2. 연도별 콘텐츠 분석
 
+2.2. 연도별 콘텐츠 분석
 콘텐츠 추가 수는 매년 증가했으며, 특히 10월~1월 사이에 많은 콘텐츠가 추가됨.
 COVID-19로 인해 2020년에 추가된 영화 수가 감소했으나, TV 쇼는 증가세를 보임.
 3. 텍스트 기반 데이터 처리
 텍스트 데이터를 전처리하고 분석 가능한 형식으로 변환하는 작업을 수행했습니다.
 
 3.1. 데이터 결합
-
 director, cast, country, listed_in, description 데이터를 결합해 클러스터링에 사용할 단일 컬럼 생성.
-3.2. 텍스트 정제
 
+3.2. 텍스트 정제
 모든 텍스트 데이터를 소문자로 변환.
 불용어(Stopwords) 제거.
 구두점(Punctuation) 제거.
 비ASCII 문자 제거.
 표제어 추출(Lemmatization)을 통해 단어를 기본 형태로 변환.
-3.3. 벡터화
 
+3.3. 벡터화
 TF-IDF 벡터화(Term Frequency-Inverse Document Frequency)를 통해 텍스트 데이터를 벡터 형태로 변환.
 최대 20000개의 속성을 생성하여 정보 손실 최소화.
-3.4. 차원 축소
 
+3.4. 차원 축소
 주성분 분석(PCA)을 사용하여 데이터의 차원을 축소.
 약 4000개의 구성 요소만으로도 분산의 80% 이상을 설명.
-계속해서 클러스터링과 추천 시스템 부분을 이어 작성하겠습니다! 😊
+
 
 4. 클러스터링
 넷플릭스 콘텐츠를 유사성에 따라 그룹화하기 위해 두 가지 주요 클러스터링 알고리즘을 사용했습니다: **K-평균 클러스터링(K-Means)**과 계층적 클러스터링(Hierarchical Clustering).
@@ -125,17 +124,17 @@ TF-IDF 벡터화(Term Frequency-Inverse Document Frequency)를 통해 텍스트 
 클러스터 9: "Comedian, Stage, Show"
 클러스터 10: "Nature, Planet, Animal"
 클러스터 11: "Mumbai, Father, Friend, India"
+
 5. 콘텐츠 기반 추천 시스템
 5.1. 추천 알고리즘
-
 **코사인 유사성(Cosine Similarity)**을 사용하여 텍스트 데이터를 비교.
 사용자가 특정 콘텐츠를 시청한 경우, 유사한 쇼를 추천.
-5.2. 추천 기능 구현
 
+5.2. 추천 기능 구현
 각 콘텐츠에 대해 TF-IDF로 벡터화된 데이터를 사용해 유사성 행렬 생성.
 사용자가 입력한 콘텐츠 제목에 따라 상위 10개의 유사 콘텐츠를 추천.
-추천 예제
 
+추천 예제
 입력: "Stranger Things"
 추천 콘텐츠:
 "Dark"
@@ -148,26 +147,22 @@ TF-IDF 벡터화(Term Frequency-Inverse Document Frequency)를 통해 텍스트 
 "The Witcher"
 "Locke & Key"
 "Teen Wolf"
+
 6. 프로젝트 결과 및 결론
 넷플릭스 데이터셋의 EDA를 통해 중요한 통찰을 발견했습니다:
-영화의 비율이 TV 쇼보다 높으며, 대부분의 콘텐츠는 미국에서 제작.
-넷플릭스는 성인 및 젊은 성인 연령대를 타겟으로 한 콘텐츠가 주를 이룸.
+  영화의 비율이 TV 쇼보다 높으며, 대부분의 콘텐츠는 미국에서 제작.
+  넷플릭스는 성인 및 젊은 성인 연령대를 타겟으로 한 콘텐츠가 주를 이룸.
 K-평균 클러스터링과 계층적 클러스터링을 활용해 클러스터링을 성공적으로 수행.
 클러스터별 주요 키워드를 도출하여 넷플릭스 콘텐츠의 주제별 분포를 분석.
 코사인 유사성을 기반으로 한 콘텐츠 기반 추천 시스템을 구현하여, 사용자 선호에 맞춘 콘텐츠 추천 가능.
-실행 방법
-필수 라이브러리 설치:
-pip install -r requirements.txt
-코드 실행:
-python main.py
-추천 시스템 테스트:
-recommend_10("Stranger Things")
+
 기술 스택
 프로그래밍 언어: Python
 라이브러리:
-데이터 처리: Pandas, NumPy
-시각화: Matplotlib, Seaborn, WordCloud
-머신러닝: Scikit-learn
-텍스트 처리: NLTK, TF-IDF Vectorizer
+  데이터 처리: Pandas, NumPy
+  시각화: Matplotlib, Seaborn, WordCloud
+  머신러닝: Scikit-learn
+  텍스트 처리: NLTK, TF-IDF Vectorizer
+
 참고 자료
 데이터 출처: Netflix Movies and TV Shows Clustering - Kaggle
