@@ -174,7 +174,7 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 * 프로그래밍 언어: ![Untitled](IMG/python.png)
 * 라이브러리:
   * 데이터 처리:  ![Untitled](IMG/pandas.png), ![Untitled](IMG/numpy.png)
-  * 시각화: Matplotlib, Seaborn, WordCloud
+  * 시각화:  ![Untitled](IMG/matplotlib.png), Seaborn, WordCloud
   * 머신러닝:  ![Untitled](IMG/scikitlearn.png)
   * 텍스트 처리: NLTK, TF-IDF Vectorizer
  
