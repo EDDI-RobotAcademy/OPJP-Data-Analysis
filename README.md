@@ -1,40 +1,43 @@
 # OPJP-Data-Analysis
 OPJP Data Analysis
-#넷플릭스 영화 및 TV 쇼 클러스터링#
+## 넷플릭스 영화 및 TV 쇼 클러스터링
 
-##프로젝트 개요##
+### 프로젝트 개요
 
 * 넷플릭스는 2022년 기준, 2억 2천만 명 이상의 가입자를 보유한 세계 최대의 스트리밍 플랫폼입니다. 사용자 경험을 개선하고 구독자 이탈을 방지하기 위해, 넷플릭스에 등록된 영화와 TV 쇼를 클러스터링하여 콘텐츠를 분석하고 추천하는 시스템을 구축했습니다.
 
 * 이 프로젝트는 넷플릭스 콘텐츠를 그룹화(클러스터링)하여 개인화된 추천 시스템을 구현하는 데 초점을 맞추고 있습니다.
 
-##주요 목표###
+### 주요 목표
 
 1. 넷플릭스 콘텐츠를 유사한 항목끼리 클러스터링.
 2. 클러스터 내부에서는 유사성이 높고, 클러스터 간에는 차별성이 유지되도록 설계.
 3. 데이터를 바탕으로 개인화된 콘텐츠 추천 시스템(Content-Based Recommender System) 구축.
 
-데이터셋 정보
+### 데이터셋 정보
 
-데이터 출처
-Kaggle 데이터셋: Netflix Movies and TV Shows Clustering
-데이터 구조
+#### 데이터 출처
+
+*Kaggle 데이터셋: Netflix Movies and TV Shows Clustering
+
+####데이터 구조
+
 데이터셋은 넷플릭스 영화 및 TV 쇼에 대한 7787개의 레코드와 11개의 속성으로 구성되어 있습니다.
 
-주요 컬럼 설명
+#####주요 컬럼 설명
 
-show_id: 영화 또는 TV 쇼의 고유 ID
-type: 콘텐츠 유형 (Movie 또는 TV Show)
-title: 제목
-director: 감독 이름
-cast: 출연진 목록
-country: 제작 국가
-date_added: 넷플릭스에 추가된 날짜
-release_year: 실제 출시 연도
-rating: 연령 등급 (예: TV-MA, TV-14 등)
-duration: 콘텐츠 길이 (분 단위 또는 시즌 수)
-listed_in: 장르 정보 (예: 드라마, 다큐멘터리 등)
-description: 간략한 콘텐츠 설명
+* show_id: 영화 또는 TV 쇼의 고유 ID
+* type: 콘텐츠 유형 (Movie 또는 TV Show)
+* title: 제목
+* director: 감독 이름
+* cast: 출연진 목록
+* country: 제작 국가
+* date_added: 넷플릭스에 추가된 날짜
+* release_year: 실제 출시 연도
+* rating: 연령 등급 (예: TV-MA, TV-14 등)
+* duration: 콘텐츠 길이 (분 단위 또는 시즌 수)
+* listed_in: 장르 정보 (예: 드라마, 다큐멘터리 등)
+* description: 간략한 콘텐츠 설명
 
 프로젝트 작업 흐름
 1. 데이터 전처리
