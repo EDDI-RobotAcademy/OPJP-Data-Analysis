@@ -1,5 +1,5 @@
 # OPJP-Data-Analysis
-OPJP Data Analysis
+
 ## 넷플릭스 영화 및 TV 쇼 클러스터링
 
 ### 프로젝트 개요
