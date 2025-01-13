@@ -170,7 +170,7 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 * 코사인 유사성을 기반으로 한 콘텐츠 기반 추천 시스템을 구현하여, 사용자 선호에 맞춘 콘텐츠 추천 가능.
 
 ## 기술 스택
-* 프로그래밍 언어: Python
+* 프로그래밍 언어: ![Untitled](IMG/python.png)
 * 라이브러리:
   * 데이터 처리: Pandas, NumPy
   * 시각화: Matplotlib, Seaborn, WordCloud
@@ -182,15 +182,6 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 <aside>
 <img src="https://www.notion.so/icons/command-line_purple.svg" alt="https://www.notion.so/icons/command-line_purple.svg" width="40px" /> **기술스택**
 
-![Untitled](img/Untitled.png)
-
-![Untitled](img/Untitled%201.png)
-
-![Untitled](img/Untitled%202.png)
-
-![Untitled](img/Untitled%203.png)
-
-![Untitled](img/Untitled%204.png)
 
 </aside>
 
