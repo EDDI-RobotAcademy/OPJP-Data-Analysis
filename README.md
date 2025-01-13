@@ -169,21 +169,23 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 * 클러스터별 주요 키워드를 도출하여 넷플릭스 콘텐츠의 주제별 분포를 분석.
 * 코사인 유사성을 기반으로 한 콘텐츠 기반 추천 시스템을 구현하여, 사용자 선호에 맞춘 콘텐츠 추천 가능.
 
+<aside>
 ## 기술 스택
 * 프로그래밍 언어: ![Untitled](IMG/python.png)
 * 라이브러리:
-  * 데이터 처리: Pandas, NumPy
+  * 데이터 처리:  ![Untitled](IMG/pandas.png), ![Untitled](IMG/numpy.png)
   * 시각화: Matplotlib, Seaborn, WordCloud
-  * 머신러닝: Scikit-learn
+  * 머신러닝:  ![Untitled](IMG/scikitlearn.png)
   * 텍스트 처리: NLTK, TF-IDF Vectorizer
-
-**Table of contents**
-
-<aside>
-<img src="https://www.notion.so/icons/command-line_purple.svg" alt="https://www.notion.so/icons/command-line_purple.svg" width="40px" /> **기술스택**
-
-
+ 
 </aside>
+
+
+
+
+
+
+
 
 참고 자료
 * 데이터 출처: Netflix Movies and TV Shows Clustering - Kaggle
