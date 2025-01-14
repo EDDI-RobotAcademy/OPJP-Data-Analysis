@@ -57,8 +57,8 @@
 #### 1.2. 데이터 변환
 * date_added를 날짜 형식으로 변환 후, 연도(year_added)와 월(month_added)로 분리.
 * duration 컬럼은 분(min) 또는 시즌(season) 데이터를 정수로 변환.
-* 
-![Untitled](IMG/df)  ➟ ![Untitled](IMG/df_after)
+  
+![Untitled](IMG/df)        ➟        ![Untitled](IMG/df_after)
 
 
 #### 1.3. 문자열 처리
