@@ -113,7 +113,7 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 3. 클러스터 2: "Young, Battle, World, School, Demon"
 4. 클러스터 3: "Crime, Murder, Adventure, Secret"
 5. 클러스터 4: "Comedian, Stage, Joke, Comedy Special"
-6. 클러스터 5: "Documentary, Filmmaker, History, World"
+6. 클러스터 5: "Life, Find, New, take, young"
    
 #### 4.2. 계층적 클러스터링
 
@@ -135,7 +135,7 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 9. 클러스터 8: "Egypt, Money, Revolution"
 10. 클러스터 9: "Comedian, Stage, Show"
 11. 클러스터 10: "Nature, Planet, Animal"
-12. 클러스터 11: "Mumbai, Father, Friend, India"
+12. 클러스터 11: "Korean, Years, South, Man, Past"
 
 ### 5. 콘텐츠 기반 추천 시스템
 
