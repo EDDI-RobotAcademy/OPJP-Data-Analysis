@@ -1,7 +1,7 @@
 # OPJP-Data-Analysis
  > 팀장: 오민수 https://github.com/yooodleee
 
- > 팀원: 정현서 
+ > 팀원: 정현서 https://github.com/jungs0914
 
 # 📍넷플릭스 영화 및 TV 쇼 클러스터링
 
