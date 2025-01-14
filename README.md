@@ -47,7 +47,9 @@
 ### 1. 데이터 전처리
 #### 1.1. 결측값 처리
 * 데이터셋에 결측값이 다수 포함되어 있으며, 이에 대한 처리가 필요했습니다.
-* ![Untitled](IMG/nat)
+  
+  ![Untitled](IMG/nat)
+  
   * director, cast, country 컬럼: 결측값을 'Unknown'으로 대체.
   * rating 컬럼: 최빈값(Mode)을 사용하여 결측값 대체.
   * date_added 컬럼: 결측값이 포함된 10개의 레코드 삭제.
@@ -55,6 +57,7 @@
 #### 1.2. 데이터 변환
 * date_added를 날짜 형식으로 변환 후, 연도(year_added)와 월(month_added)로 분리.
 * duration 컬럼은 분(min) 또는 시즌(season) 데이터를 정수로 변환.
+* 
 ![Untitled](IMG/df)  ➟ ![Untitled](IMG/df_after)
 
 
@@ -67,12 +70,16 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 
 #### 2.1. 데이터 분포
 * 영화는 데이터셋의 약 **69.14%**를 차지하며, TV 쇼는 약 **30.86%**로 나타남.
+  
   ![Untitled](IMG/movies&tv_data.png)
 * 넷플릭스 콘텐츠는 미국, 인도, 영국 순으로 제작된 비중이 높음.
+  
   ![Untitled](IMG/top_nation)
 * 장르별로는 드라마, 코미디, 다큐멘터리가 상위권에 위치.
+  
   ![Untitled](IMG/top_genre)
 * 대부분의 콘텐츠는 성인 및 젊은 성인 연령대를 대상으로 제작.
+  
   ![Untitled](IMG/age_groups)
 
 #### 2.2. 연도별 콘텐츠 분석
