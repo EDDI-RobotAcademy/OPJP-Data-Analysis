@@ -48,7 +48,7 @@
 #### 1.1. 결측값 처리
 * 데이터셋에 결측값이 다수 포함되어 있으며, 이에 대한 처리가 필요했습니다.
   
-  ![Untitled](IMG/nat)
+  ![Untitled](IMG/nat.png)
   
   * director, cast, country 컬럼: 결측값을 'Unknown'으로 대체.
   * rating 컬럼: 최빈값(Mode)을 사용하여 결측값 대체.
@@ -58,7 +58,7 @@
 * date_added를 날짜 형식으로 변환 후, 연도(year_added)와 월(month_added)로 분리.
 * duration 컬럼은 분(min) 또는 시즌(season) 데이터를 정수로 변환.
   
-![Untitled](IMG/df)        ➟        ![Untitled](IMG/df_after)
+![Untitled](IMG/df.png)        ➟        ![Untitled](IMG/df_after.png)
 
 
 #### 1.3. 문자열 처리
@@ -74,19 +74,21 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
   ![Untitled](IMG/movies&tv_data.png)
 * 넷플릭스 콘텐츠는 미국, 인도, 영국 순으로 제작된 비중이 높음.
   
-  ![Untitled](IMG/top_nation)
+  ![Untitled](IMG/top_nation.png)
 * 장르별로는 드라마, 코미디, 다큐멘터리가 상위권에 위치.
   
-  ![Untitled](IMG/top_genre)
+  ![Untitled](IMG/top_genre.png)
 * 대부분의 콘텐츠는 성인 및 젊은 성인 연령대를 대상으로 제작.
   
-  ![Untitled](IMG/age_groups)
+  ![Untitled](IMG/age_groups.png)
 
 #### 2.2. 연도별 콘텐츠 분석
 * 콘텐츠 추가 수는 매년 증가했으며, 특히 10월~1월 사이에 많은 콘텐츠가 추가됨.
-  ![Untitled](IMG/add_months)
+  
+  ![Untitled](IMG/add_months.png)
 * COVID-19로 인해 2020년에 추가된 영화 수가 감소했으나, TV 쇼는 증가세를 보임.
-  ![Untitled](IMG/2008_netflix)
+  
+  ![Untitled](IMG/2008_netflix.png)
   
 ### 3. 텍스트 기반 데이터 처리
 텍스트 데이터를 전처리하고 분석 가능한 형식으로 변환하는 작업을 수행했습니다.
@@ -108,7 +110,7 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 #### 3.4. 차원 축소
 * 주성분 분석(PCA)을 사용하여 데이터의 차원을 축소.
 * 약 4000개의 구성 요소만으로도 분산의 80% 이상을 설명.
-  ![Untitled](IMG/pca)
+  ![Untitled](IMG/pca.png)
 
 
 ### 4. 클러스터링
@@ -118,15 +120,15 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 
 * 최적 클러스터 수 결정:
   * 엘보우(Elbow) 기법과 **실루엣 점수(Silhouette Score)**를 통해 클러스터 수를 결정.
-    ![Untitled](IMG/elbow) ![Untitled](IMG/silhouette.png)
+    ![Untitled](IMG/elbow.png) ![Untitled](IMG/silhouette.png)
   * 최적의 클러스터 수: 6개.
     
 * 결과 시각화:
   * 각 클러스터의 콘텐츠 수를 시각화하여 클러스터의 분포를 분석.
   * 클러스터별 주요 키워드를 워드클라우드로 시각화하여 각 클러스터의 주제를 도출.
-    ![Untitled](IMG/kmeans_1)
-    ![Untitled](IMG/kmeans_2)
-    ![Untitled](IMG/kmeans_3)
+    ![Untitled](IMG/kmeans_1.png)
+    ![Untitled](IMG/kmeans_2.png)
+    ![Untitled](IMG/kmeans_3.png)
     
 클러스터별 주요 키워드
 
@@ -136,7 +138,7 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 4. 클러스터 3: "Crime, Murder, Adventure, Secret"
 5. 클러스터 4: "Comedian, Stage, Joke, Comedy Special"
 6. 클러스터 5: "Life, Find, New, take, young"
-   ![Untitled](IMG/6_word)
+   ![Untitled](IMG/6_word.png)
    
 #### 4.2. 계층적 클러스터링
 
@@ -159,7 +161,7 @@ EDA를 통해 데이터셋의 주요 특성과 패턴을 분석했습니다.
 10. 클러스터 9: "Comedian, Stage, Show"
 11. 클러스터 10: "Nature, Planet, Animal"
 12. 클러스터 11: "Korean, Years, South, Man, Past"
-    ![Untitled](IMG/12_word)
+    ![Untitled](IMG/12_word.png)
 
 ### 5. 콘텐츠 기반 추천 시스템
 
